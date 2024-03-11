@@ -10,7 +10,7 @@
         android:id="@+id/imageViewNoConnection"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@drawable/webview"
+        android:src="@drawable/network"
         android:contentDescription="@string/no_internet" /> <!-- Make sure you have a suitable drawable resource -->
 
 <!--    <TextView-->
