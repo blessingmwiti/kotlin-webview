@@ -25,7 +25,7 @@ class WebViewActivity : AppCompatActivity() {
     private fun initWebView() {
         binding.webview.apply {
             webViewClient = WebViewClient() // Ensure links open in the WebView not in a browser
-            loadUrl("https://sawititech.co.ke/sms/") // TODO: Replace with your actual URL
+            loadUrl("https://your-url.com") // TODO: Replace with your actual URL
             settings.javaScriptEnabled = true // Enable JavaScript if required by your web app
         }
     }
