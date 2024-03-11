@@ -1,0 +1,30 @@
+<!-- res/layout/activity_no_connection.xml -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="16dp">
+
+    <ImageView
+        android:id="@+id/imageViewNoConnection"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/webview"
+        android:contentDescription="@string/no_internet" /> <!-- Make sure you have a suitable drawable resource -->
+
+<!--    <TextView-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginTop="20dp"-->
+<!--        android:text="@string/kindly_check_your_internet"-->
+<!--        android:textSize="18sp"-->
+<!--        android:textAlignment="center" />-->
+
+    <Button
+        android:id="@+id/buttonRetry"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="@string/retry" />
+</LinearLayout>
