@@ -16,6 +16,9 @@ class NoConnectionActivity : AppCompatActivity() {
         binding = ActivityNoConnectionBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        // Displaying the toast message immediately when the activity starts
+        Toast.makeText(this, "No internet connection. Please check your network settings.", Toast.LENGTH_LONG).show()
+
         binding.buttonRetry.setOnClickListener {
             if (isNetworkAvailable()) {
                 startActivity(Intent(this, WebViewActivity::class.java))

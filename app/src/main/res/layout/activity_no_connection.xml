@@ -6,25 +6,18 @@
     android:gravity="center"
     android:padding="16dp">
 
+    <!-- Make sure you have a suitable drawable resource -->
+
     <ImageView
         android:id="@+id/imageViewNoConnection"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@drawable/network"
-        android:contentDescription="@string/no_internet" /> <!-- Make sure you have a suitable drawable resource -->
-
-<!--    <TextView-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:layout_marginTop="20dp"-->
-<!--        android:text="@string/kindly_check_your_internet"-->
-<!--        android:textSize="18sp"-->
-<!--        android:textAlignment="center" />-->
+        android:layout_height="723dp"
+        android:contentDescription="@string/no_internet"
+        android:src="@drawable/network" />
 
     <Button
         android:id="@+id/buttonRetry"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
         android:text="@string/retry" />
 </LinearLayout>
