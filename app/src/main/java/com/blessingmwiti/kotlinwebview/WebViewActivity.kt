@@ -1,5 +1,6 @@
 package com.blessingmwiti.kotlinwebview
 
+import android.annotation.SuppressLint
 import android.app.DownloadManager
 import android.net.Uri
 import android.os.Bundle
@@ -24,11 +25,12 @@ class WebViewActivity : AppCompatActivity() {
         setupWebView()
     }
 
+    @SuppressLint("SetJavaScriptEnabled")
     private fun setupWebView() {
         binding.webview.apply {
             webViewClient = WebViewClient()
-            settings.javaScriptEnabled = true
-            loadUrl("https://example.com")
+            settings.javaScriptEnabled = true // this setting can introduce XSS vulnerability, make sure you are confident with your web-view url security
+            loadUrl("https://sawititech.co.ke/sms")
 
             // Set up download listener
             setDownloadListener { url, userAgent, contentDisposition, mimeType, contentLength ->
