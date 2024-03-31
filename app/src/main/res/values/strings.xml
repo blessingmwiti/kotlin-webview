@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">kotlin webview</string>
+    <string name="kindly_check_your_internet">Kindly check your internet!</string>
+    <string name="retry">Retry</string>
+    <string name="no_connection">no connection</string>
+    <string name="splash_screen">splash screen</string>
+</resources>
