@@ -28,7 +28,7 @@ class WebViewActivity : AppCompatActivity() {
         binding.webview.apply {
             webViewClient = WebViewClient()
             settings.javaScriptEnabled = true
-            loadUrl("https://sawititech.co.ke/sms")
+            loadUrl("https://example.com")
 
             // Set up download listener
             setDownloadListener { url, userAgent, contentDisposition, mimeType, contentLength ->
