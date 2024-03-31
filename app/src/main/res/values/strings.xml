@@ -1,6 +1,0 @@
-<resources>
-    <string name="app_name">Webview</string>
-    <string name="no_internet">No internet</string>
-    <string name="retry">Retry</string>
-    <string name="splash_screen_image">splash screen image</string>
-</resources>
