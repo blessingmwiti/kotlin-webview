@@ -30,7 +30,7 @@ class WebViewActivity : AppCompatActivity() {
         binding.webview.apply {
             webViewClient = WebViewClient()
             settings.javaScriptEnabled = true // this setting can introduce XSS vulnerability, make sure you are confident with your web-view url security
-            loadUrl("https://sawititech.co.ke/sms")
+            loadUrl("https://example.com")
 
             // Set up download listener
             setDownloadListener { url, userAgent, contentDisposition, mimeType, contentLength ->
