@@ -2,9 +2,11 @@ package com.blessingmwiti.kotlinwebview
 
 import android.annotation.SuppressLint
 import android.app.DownloadManager
+import android.graphics.Bitmap
 import android.net.Uri
 import android.os.Bundle
 import android.os.Environment
+import android.view.View
 import android.webkit.CookieManager
 import android.webkit.URLUtil
 import android.webkit.WebView
@@ -23,14 +25,25 @@ class WebViewActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         setupWebView()
+        binding.webview.loadUrl("https://example.com/")
     }
 
     @SuppressLint("SetJavaScriptEnabled")
     private fun setupWebView() {
+        binding.progressBar.visibility = View.VISIBLE // Show spinner at the start
         binding.webview.apply {
-            webViewClient = WebViewClient()
+            webViewClient = object : WebViewClient() {
+                override fun onPageStarted(view: WebView?, url: String?, favicon: Bitmap?) {
+                    binding.progressBar.visibility = View.VISIBLE // Show spinner on page start
+                }
+
+                override fun onPageFinished(view: WebView?, url: String?) {
+                    binding.progressBar.visibility = View.GONE // Hide spinner when page is fully loaded
+                }
+
+                // Implement onReceivedError and onReceivedHttpError if needed
+            }
             settings.javaScriptEnabled = true // this setting can introduce XSS vulnerability, make sure you are confident with your web-view url security
-            loadUrl("https://example.com")
 
             // Set up download listener
             setDownloadListener { url, userAgent, contentDisposition, mimeType, contentLength ->
