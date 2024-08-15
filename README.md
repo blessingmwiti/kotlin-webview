@@ -6,7 +6,7 @@ A Kotlin App that uses a webapp url, which is rendered as an Android App.
 
 To change the url, head to
 ```bash
-WebActivity.kt
+WebViewActivity.kt
 ```
 and update with yours
 
